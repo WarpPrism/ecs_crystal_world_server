@@ -6,8 +6,6 @@ const favicon = require('serve-favicon');
 
 const app = express();
 
-const router = require('./routers/main');
-app.use(router);
 
 const env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
@@ -21,10 +19,16 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static(path.join(__dirname, 'static')));
 
+const router = require('./routers/main');
+app.use(router);
+
+
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+
+
 
 // app.use(favicon(__dirname + '/static/favicon.ico'));
 

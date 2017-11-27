@@ -1,5 +1,36 @@
 extends layout
 
+block css
+    link(rel="stylesheet", href="/normalize7.css")
+    link(rel="stylesheet", href="index/style.css")
+
 block content
-    h1 Welcom to ECS_Crystal_World!
-    p index
+    .container
+        section.main-section
+            //- .left-section
+            //-     img(src="index/bg.jpeg", alt="crystal")
+            //- .right-section
+            //-     ul.link-ul
+            //-         li.link-li
+            //-             a(href="/apple/#/iphone_music").link-item
+            //-                 .link-img.music-img
+            //-                 .link-txt 音乐
+            //-         li.link-li
+            //-             a(href="/apple/#/iphone_music").link-item
+            //-                 .link-img.music-img
+            //-                 .link-txt 文章
+            //-         li.link-li
+            //-             a(href="/apple/#/iphone_music").link-item
+            //-                 .link-img.music-img
+            //-                 .link-txt 留言
+            //-         li.link-li
+            //-             a(href="/apple/#/iphone_music").link-item
+            //-                 .link-img.music-img
+            //-                 .link-txt 支持
+            //-         li.link-li
+            //-         li.link-li
+        footer.footer
+            .hitokoto-txt
+        
+block js
+    script(src='index/index.js')
