@@ -1,0 +1,32 @@
+body {
+  background: #fff;
+}
+.page-wrap {
+  padding-top: 100px;
+  color: #262626;
+}
+.page-wrap .center-pic {
+  display: block;
+  width: 380px;
+  margin: 0 auto;
+}
+.page-wrap .msg {
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 50px 0;
+}
+.page-wrap .links-wrap {
+  text-align: center;
+}
+.page-wrap .link-btn {
+  display: inline-block;
+  padding: 5px 30px;
+  margin: 0 60px;
+  color: #fff;
+  background: #262626;
+  text-decoration: none;
+}
+.page-wrap .link-btn:hover {
+  background: #565656;
+}

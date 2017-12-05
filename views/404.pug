@@ -1,0 +1,12 @@
+extends layout
+
+block css
+    link(rel="stylesheet", href="404/404.css")
+
+block content
+    .page-wrap
+        img.center-pic(src="public/imgs/404.png", alt="")
+        h1.msg 页面不见了，请访问其他资源
+        .links-wrap
+            a.link-btn(href="/") 首页
+            a.link-btn(href="javascript:history.back();") 返回
