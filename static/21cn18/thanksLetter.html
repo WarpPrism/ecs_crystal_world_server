@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <!-- QQ强制全屏 -->
+  <meta name="x5-fullscreen" content="true">
+  <!-- QQ应用模式 -->
+  <meta name="x5-page-mode" content="app">
+  <title>21CN十八周年-感谢信</title>  
+  <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/letter.css">
+  <script>
+    // px-rem 自适应换算
+    function Rem() {
+        var docEl = document.documentElement,
+            oSize = docEl.clientWidth / 7.5;
+
+        if (oSize > 144) {
+            oSize = 144; //  限制rem值   640 /7.5 =85
+        }
+
+        docEl.style.fontSize = oSize + 'px';
+    }
+    window.addEventListener('resize', Rem, false);
+    Rem();
+</script>
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src='js/vendor/es6-promise.js'></script>
+<script src='js/vendor/es6-promise-auto.js'></script>
+<script src="js/vendor/html2canvas.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
+<script type='text/javascript' src='js/letter.js'></script>
+</head>
+<body>
+  <div class="letter-wrap">
+    <div class="loader-wrap"></div>
+    <div class="scene scene1">
+      <div class="content-wrap">
+        <p class="staff-section"><span class='staff-name'>您好</span>感谢有你一直相伴的</p>
+        <div class="time-section"><span class="day">365</span>天</div>
+        <p class='time-section-p'></p>
+        <div class="msg-section">
+          <p class="msg"></p>
+          <div class="msg-done">
+            <p>光阴荏苒 白驹过隙</p>
+            <p>与你朝夕相处的日子</p>
+            <p>有酸甜苦辣 有欢笑和泪花</p>
+            <p>一起见证你的青春年少 风华正茂</p>
+            <p>一起经历你的彷徨与迷茫 坚强与执着</p>
+            <p>一起见证你的成长 与团队共进步</p>
+            <p>让我们继续同心 同行 风雨彩虹</p>
+            <p>因为有你</p>
+            <p>21CN的明天更精彩</p>
+          </div>
+        </div>
+        <div class="share-section">
+          <div class="ercode-section">
+            <div class="ercode"></div>
+            <!-- <p>扫描观看21CN的辉煌</p> -->
+          </div>
+          <div class="share-btn"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene scene2">
+      <a href='http://www.21cn.com/zt/2017/recurit2018/' class="hire-btn"></a>
+    </div>
+
+    <canvas id="canvas" style='display: none;'></canvas>
+    <!-- <canvas id="canvas"></canvas> -->
+
+    <div class="share-mask">
+      <div class="share-img-wrap">
+        <img src=""  class="for-screen">
+        <img class="hand" src="./images/hand.png">      
+      </div>
+      <p class="save-tip">长按保存图片去朋友圈晒</p>      
+    </div>
+  </div>
+</body>
+</html>

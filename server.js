@@ -50,7 +50,7 @@ app.use(function(err, req, res, next) {
     }
 });
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5210);
 
 const server = app.listen(app.get('port'), () => {
     console.log("------------------------------------------");    
