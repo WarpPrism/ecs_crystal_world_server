@@ -47,10 +47,11 @@
 <script src="js/vendor/html2canvas.min.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script src="http://qzonestyle.gtimg.cn/qzone/qzact/common/share/share.js"></script>
-<script type='text/javascript' src='js/letter.js'></script>
+<script src='js/letter.js'></script>
 </head>
 <body>
   <div class="letter-wrap">
+    <div class="music-switch music-play"></div>
     <div class="loader-wrap"></div>
     <div class="scene scene1">
       <div class="content-wrap">
@@ -74,7 +75,11 @@
         <div class="share-section">
           <div class="ercode-section">
             <div class="ercode"></div>
-            <!-- <p>扫描观看21CN的辉煌</p> -->
+            <div class="p-section">
+                <p>长按识别</p>
+                <p>一起见证21CN的成长历程</p>
+            </div>
+            
           </div>
           <div class="share-btn"></div>
         </div>
@@ -96,5 +101,7 @@
       <p class="save-tip">长按保存图片去朋友圈晒</p>      
     </div>
   </div>
+
+  <audio src="./bg.mp3" id="audio" autoplay loop preload="true"></audio>
 </body>
 </html>

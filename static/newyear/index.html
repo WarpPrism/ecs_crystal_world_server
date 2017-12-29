@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>2018年总裁新年致辞</title>
+  <meta name="description" content="21CN总裁新年致辞">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- uc强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <!-- UC强制全屏 -->
+  <meta name="full-screen" content="yes">
+  <!-- UC应用模式 -->
+  <meta name="browsermode" content="application">
+  <!-- QQ强制竖屏 -->
+  <meta name="x5-orientation" content="portrait">
+  <script src='./iphone-inline-video.min.js'></script>
+  <link rel="stylesheet" href="./normalize.css">
+  <style>
+    html,body {padding:0; margin:0; width:100%; overflow-x:hidden; font-size:16px;user-select:none;-webkit-user-select: none;}
+    div,p,h1,h2,section,ul,ol,li {margin:0; padding: 0;}
+    .IIV::-webkit-media-controls-play-button,
+    .IIV::-webkit-media-controls-start-playback-button {
+        opacity: 0;
+        pointer-events: none;
+        width: 5px;
+    }
+    .page-wrapper {
+      width: 100%;
+      height: 24.6rem;
+      position: relative;
+      padding-top: .1px;
+    }
+    .loader-wrap {
+      width: 100%;
+      height: 100%;
+      background: #f2f3f4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+    .tv-wrapper {
+      /* display: none; */
+      width: 100%;
+      height: 7.05rem;
+      position: absolute;
+      top: 0;
+      background: url('./imgs/tv.png') no-repeat;
+      background-size: 100%;
+      z-index: 3;
+    }
+    .play-btn {
+      width: 1.15rem;
+      height: 1.15rem;
+      background: url('./imgs/play.png') no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      z-index: 5; 
+    }
+    .play-btn:active {
+        background: url('./imgs/play-active.png') no-repeat;
+        background-size: 100%;      
+    }
+    .video-wrapper {
+      width: 95%;
+      margin: 1.7rem auto 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      z-index: 1;
+      transform: scale(1.3) translateX(-0.1rem);
+      -webkit-transform: scale(1.3) translateX(-0.1rem);
+    }
+    #video {
+      width: 100%;
+      display: inline-block;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      object-position: 0 100%;
+      object-fit: 'contain';
+      background-color: #fff;
+    }
+    .video-thumb {
+      width: 100%;
+      height: 4rem;
+      background: url('./imgs/video-thumb.jpg') no-repeat;;
+      background-size: cover;
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .video-mask {
+      width: 100%;
+      height: 4rem;
+      background: rgb(0,0,0);
+      opacity: 0.4;
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .content-wrapper {
+      width: 100%;
+      height: 17.5rem;
+      position: absolute;
+      top: 7.05rem;
+      background: url('./imgs/content.jpg') no-repeat;
+      background-size: 100%;
+      z-index: 3;      
+    }
+  </style>
+
+  <script>
+    // Rem
+    function Rem() {
+      var docEl = document.documentElement;
+      var fontSize = docEl.clientWidth / 7.5;
+      if (fontSize > 85) fontSize = 85;
+      docEl.style.fontSize = fontSize + 'px';
+    }
+    window.addEventListener('resize', Rem, false);
+    window.addEventListener('orientationchange', Rem, false);
+    Rem();
+  </script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="loader-wrap"></div>
+    <div class="tv-wrapper">
+      <div class="play-btn"></div>    
+    </div>
+    <div class="video-wrapper">
+      <div class="video-thumb"></div>      
+      <div class="video-mask"></div>
+      <video src="http://vliveachy.tc.qq.com/vcloud.tc.qq.com/1014_f001bd5befb844c399091bdb63a1d7f8.f20.mp4?vkey=FF863FB83D5528806439F59876C9CAFE5B523DA0DC8C148D479C317C937E65E31F0B7B3E1C333B2E75B321DA126CDFD1E01113970EAD8005D9B2817B85DBB427E457AF28EB3107765FFDC88DB7F08EC5E30B1BC00ED13F18&sha=60208bcb7747852214e3238011649ebc6bca99c8&ocid=2434602156&ocid=193729964"
+        id="myvideo" width="100%" height="auto"
+        x5-video-player-type="h5"
+        x5-video-player-fullscreen="false"
+        x5-video-orientation="portrait"
+        webkit-playsinline
+        playsinline x5-playsinline
+        airplay="allow" x-webkit-airplay="allow"
+        preload="auto">
+      </video>
+    </div>
+    <div class="content-wrapper"></div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      var cw = document.documentElement.clientWidth;
+      var myvideo = document.querySelector('#myvideo');
+      var playBtn = document.querySelector('.play-btn');
+      var videoMask = document.querySelector('.video-mask');
+      var videoThumb = document.querySelector('.video-thumb');
+
+      var loaderWrap = document.querySelector('.loader-wrap');
+      setTimeout(function() {
+        loaderWrap.style.display = 'none';
+      }, 500)
+
+      enableInlineVideo(myvideo);
+
+      playBtn.addEventListener('click', function(e) {
+        playBtn.style.display = 'none';
+        videoMask.style.display = 'none';
+        videoThumb.style.display = 'none';
+        myvideo.play();
+      }, false);
+
+      myvideo.addEventListener("x5videoexitfullscreen", function(){
+        // alert("player exitfullscreen");
+        playBtn.style.display = 'block';
+        videoMask.style.display = 'block';
+      })
+
+      myvideo.addEventListener('ended', function(e) {
+        // alert('video end');
+      })
+    }
+  </script>
+</body>
+</html>

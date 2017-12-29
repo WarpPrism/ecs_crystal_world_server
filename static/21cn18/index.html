@@ -51,13 +51,13 @@
       title: 'Beyond | 21CN十八周年庆',
       desc: '与你分享21CN十八岁生日的喜悦',
       picUrl: 'http://k.21cn.com/18th/events/images/wx-share.png'
-    })
+    });
     setShareInfo({
       url: 'http://k.21cn.com/18th/events/',
       title: 'Beyond | 21CN十八周年庆',
-      desc: '与你分享21CN十八岁生日的喜悦',
-      picUrl: 'http://k.21cn.com/18th/events/images/wx-share.png'
-    })
+      summary: '与你分享21CN十八岁生日的喜悦',
+      pic: 'http://k.21cn.com/18th/events/images/wx-share.png'
+    });
     // 外部分享
     function setPageShare(share) {
       var shareurl = share.url;
@@ -90,6 +90,9 @@
             ]
           });
           wx.ready(function () {
+            var globalAudio=document.getElementById("audio");
+            globalAudio.play();
+
             wx.onMenuShareTimeline({
               title: sharetitle,
               desc: sharedesc,
@@ -140,14 +143,16 @@
 
 <body>
   <div class="container" id="container">
+    <div class="music-switch music-play"></div>
+
     <!-- 地图主容器-->
     <div class="main-container">
       <div class="map-box">
 
       </div>
       <img class="top-flow" src="./images/top_flow.png">
-      <h1 class="main-title">时光穿梭 · </h1>
-      <span class="single-location">天河</span>
+      <h1 class="main-title">时光穿梭&nbsp;·</h1>
+      <span class="single-location">&nbsp;&nbsp;天河</span>
       <h2 class="main-locaiton"></h2>
       <div class="message message-1" id="switch-point">
         <P class="year-range">1999年</P>
@@ -168,6 +173,7 @@
     <canvas class="background-canvas" id="background-canvas"></canvas>
     <canvas class="point-canvas" id="point-canvas"></canvas>
     <p class="switch-text" id="switch-text"></p>
+    <p class="switch-number" id="switch-number"></p>
     <div class="thanks">
       <img src="./images/letter_title.png" class="letter-title">
       <img src="./images/main_letter.png" class="main-letter">
@@ -178,9 +184,12 @@
         <img src="./images/open_letter.png" id="to-login">
       </a>
     </div>
+    <div class="only-weixin">
+      <img src="./images/only-weixing.png" >
+      <p>请在微信中打开H5</p>
+    </div>
   </div>
-
-  <audio src="events-bg.mp3" preload="true">您的浏览器不支持HTML5音频元素</audio>
+  <audio src="./bg.mp3" id="audio" autoplay loop preload="true"></audio>
 </body>
 
 </html>
